@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+*,*:before,*:after
+{
+	margin:0;
+	padding:0;
+}
+
+.wrapper
+{
+	height: 100vh;
+}
+
+.wrapper,.container
+{
+	text-align: center;
+	margin:0 auto;
+}
+
+.container
+{
+	width:500px;
+	min-height:500px;
+	border-radius: 50%;	
+}
+
+.container h1
+{
+	font-size: 50px;
+	padding:20px;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.pad,.clickable
+{
+	width:49%;
+	height:250px;
+	display: inline-block;
+	position: relative;
+}
+
+.light
+{
+	height:100%;
+	width:100%;
+   position: absolute;
+	top:0;
+	left:0;
+	z-index: 99;
+	opacity: 0;
+  box-shadow:inset 0 0px 20px 1px rgba(0,0,0,.6);
+ }
+
+.green,.LT-light
+{
+	background-color: #8bc34a;
+	border-top-left-radius: 100%;
+}
+
+.LT-light
+{
+   background: linear-gradient(#B4EEB4,#8bc34a);
+} 
+
+.red,.RT-light
+{
+	background-color:#E83635;
+	border-top-right-radius: 100%;
+}
+
+.RT-light
+{
+  background: linear-gradient(#f75554,#E83635);
+  border-top-right-radius: 100%;
+}
+
+.yellow,.LB-light
+{
+	background-color: yellow;
+	border-bottom-left-radius: 100%;
+}
+
+.LB-light
+{
+ background: linear-gradient(#FFFF66,yellow);
+}
+
+.blue,.RB-light
+{
+	background-color: #4C4CFF;
+	border-bottom-right-radius: 100%;
+  
+	
+}
+
+.RB-light
+{
+    
+   background: linear-gradient(#4C4CFF,blue);
+}
+
+.controls
+{
+	padding:50px 10px;
+}
+
+.display
+{
+	width:100%;
+	height: 80px;
+	display: inline-block;
+	margin:0 auto;
+	border:1px solid rgba(0,0,0,.3);
+	text-align: center;
+	background: whitesmoke;
+	box-shadow: 0px 0px 0px 5px rgba(0,0,0,.2);
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+}
+
+.display p 
+{
+	padding:20px;
+	color:#000;
+	font-size: 30px;
+}
+
+.start,.strict
+{
+	width:40px;
+	height:40px;
+	font-weight: bold;
+	display: inline-block;
+	border-radius: 50%; 
+	background:#8bc34a;
+	box-shadow: 0px 0px 6px rgba(0,0,0,.3);
+	position: relative;
+	margin:20px;
+}
+
+.strict
+{
+	background: #ccc;
+	transition:background .5s;
+}
+
+.start:after,.strict:after
+
+{
+	font-size: 20px;
+	content:'start';
+	position: absolute;
+	left:0px;
+	bottom:-20px;
+}
+
+.strict:after
+{
+	content:'strict';
+}
+
+.strictOn
+{
+	background:red;
+	transition:background .5s;
+}
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  top:10px;
+  display: inline-block;
+  width: 160px;
+  height: 34px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content:'';
+	height: 26px;
+  width: 26px;
+  left: 14px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	content: '\f011';
+	font-family: FontAwesome;
+	line-height: 25px;
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+h5
+{
+	margin-top: 20px;
+}
+
+.gameOver,.winner
+{
+	width:100%;
+	height:100%;
+	background:#00B5ED;
+	position: fixed;
+	top:0%;
+	left:100%;
+	z-index: 100;
+	text-align: center;
+}
+
+
+.gameOver .con,.winner .con
+{
+	position: relative;
+	top:50%;
+	transform:translateY(-50%);
+	
+}
+.gameOver h1, .gameOver h4,.gameOver h5, .winner h1, .winner h4,.winner h5
+{	
+	margin: 0 auto;
+	color:#fff;
+	padding:20px;
+}
+
+.gameOver h1, .winner h1
+{
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.gameOver h4, .winner h4
+{
+	font-size: 20px;
+	margin:20px auto 40px auto;
+}
+
+.gameOver .play-again, .winner .play-again
+{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	background:linear-gradient(#34ca3a,#45ae2a);
+	border-radius: 10px;
+	box-shadow:inset 0px -10px #45ae2a;
+}
+
+.play-again:hover
+{
+	cursor: pointer;
+}
+
+
+
+@media screen and (max-height:768px),(max-width:558px){
+
+	.container
+	{
+		
+		height:300px;
+		width:300px;
+	}
+
+	.pad
+	{
+		height:150px;
+	}
+}
+
+
